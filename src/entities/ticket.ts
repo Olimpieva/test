@@ -1,10 +1,12 @@
-export enum TicketStatus {
-  OPEN = "open",
-  IN_PROGRESS = "in-progress",
-  PENDING_APPROVAL = "pending-approval",
-  AWAITING_CONFIRMATION = "awaiting-confirmation",
-  CLOSED = "closed",
+export enum TicketStatusRU {
+  "opened" = "Открыт",
+  "in-progress" = "В процессе",
+  "pending-approval" = "На согласовании",
+  "awaiting-confirmation" = "Ожидает подтверждения",
+  "closed" = "Закрыт",
 }
+
+export type TicketStatus = keyof typeof TicketStatusRU;
 
 export enum SupportType {
   OTHER = "other",
@@ -35,4 +37,11 @@ export type TicketPreview = {
   updatedAt: string;
   dueDate: string;
   status: TicketStatus;
+};
+
+export type FetchTicketsResponse = {
+  tickets: TicketPreview[];
+  total: number;
+  page: number;
+  limit: number;
 };
