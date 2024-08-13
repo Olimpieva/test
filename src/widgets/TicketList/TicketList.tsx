@@ -15,10 +15,7 @@ type Props = {
 
 const TicketList = ({ data }: Props) => {
   const [currentTab, setCurrentTab] = useState<TicketStatus | null>(null);
-
   const { tickets: list, total, page } = data;
-
-  console.log({ list, data });
 
   const filteredTickets = useMemo(() => {
     if (!currentTab) {

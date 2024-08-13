@@ -18,13 +18,7 @@ const RootLayout: React.FC<Props> = ({ children }) => (
           <a href="/tickets">Tickets</a>
         </nav>
       </header>
-      <main style={{ margin: "60px 40px" }}>
-        {children} {/* Здесь рендерятся все страницы */}
-      </main>
-      <footer>
-        {/* Ваш футер */}
-        <p>© 2024 My Next.js App</p>
-      </footer>
+      <main style={{ margin: "60px 40px" }}>{children}</main>
     </body>
   </html>
 );

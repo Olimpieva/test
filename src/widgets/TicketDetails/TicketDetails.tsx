@@ -4,6 +4,7 @@ import React from "react";
 import { Card, Typography } from "antd";
 import { Ticket } from "entities/ticket";
 import { TicketStatus } from "components";
+
 import css from "./TicketDetails.module.scss";
 
 const { Title, Text } = Typography;
@@ -25,7 +26,7 @@ const TicketDetails = ({ ticket }: Props) => {
     awaitingResponse,
     resolution,
   } = ticket;
-  console.log({ ticket });
+
   return (
     <Card
       title={`Обращение № ${id} от ${new Date(createdAt).toLocaleDateString(
